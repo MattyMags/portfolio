@@ -2,9 +2,9 @@ import { useState } from 'react';
 import NextApp, { AppProps, AppContext } from 'next/app';
 import { getCookie, setCookie } from 'cookies-next';
 import Head from 'next/head';
-import { MantineProvider, ColorScheme, ColorSchemeProvider, localStorageColorSchemeManager} from '@mantine/core';
+import { MantineProvider, ColorScheme, ColorSchemeProvider, localStorageColorSchemeManager, useMantineColorScheme} from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
-
+import '@mantine/core/styles.css';
 export default function App(props) {
   const { Component, pageProps } = props;
   const [colorScheme, setColorScheme] = useState(props.colorScheme);
@@ -16,6 +16,7 @@ export default function App(props) {
     setColorScheme(nextColorScheme);
     setCookie('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 });
   };
+
 
   return (
     <>
@@ -30,7 +31,7 @@ export default function App(props) {
         colorSchemeManager={colorSchemeManager}
         toggleColorScheme={toggleColorScheme}
           theme={{
-            // colorScheme,
+            colorScheme,
             headings: {
               // properties for all headings
               fontWeight: 400,
