@@ -1,6 +1,11 @@
-.icon {
+/* .icon {
   width: rem(22px);
   height: rem(22px);
+} */
+.container {
+  display: flex; 
+  align-items: center; 
+  flex-direction: column
 }
 
 .dark {
@@ -23,6 +28,6 @@
   }
 }
 
-.demo {
-  color: light-dark(red, blue);
+.hidden {
+  visibility: hidden;
 }
