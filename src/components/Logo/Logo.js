@@ -7,7 +7,8 @@ const Logo = () => {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 410.01 502.87"
-      height="5rem">
+      height="5rem"
+    >
       <defs />
       <g id="Artboard_1" data-name="Artboard 1">
         <path

@@ -44,7 +44,8 @@ export default function App(props) {
           }
         }}
         withGlobalStyles
-        withNormalizeCSS>
+        withNormalizeCSS
+      >
         <Component {...pageProps} />
         {/* <Notifications /> */}
       </MantineProvider>
