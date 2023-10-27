@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import ColorSchemeToggle from '@components/ColorSchemeToggle/ColorSchemeToggle.jsx'
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
+        <ColorSchemeToggle/>
+        {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
@@ -46,7 +48,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <footer>
