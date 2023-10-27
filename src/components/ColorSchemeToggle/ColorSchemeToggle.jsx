@@ -18,10 +18,10 @@ const ColorSchemeToggle = () => {
         size={90}
       />
       {/* {true  && ( */}
-      <Text className={clsx(clicks < 5 && classes.hidden)} fz={'.7rem'}>
+      <Text className={clsx(clicks < 5 && classes.hidden)} fz={'1.7rem'}>
         Easy now, you're gonna break it.
       </Text>
-      <Text className={clsx(clicks < 5 && classes.hidden)} fz={'.7rem'}>
+      <Text className={clsx(clicks < 5 && classes.hidden)} fz={'1.7rem'}>
         {clicks} clicks so far.
       </Text>
       {/* )} */}
