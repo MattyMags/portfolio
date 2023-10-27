@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '@styles/Home.module.css';
-import ColorSchemeToggle from '@components/ColorSchemeToggle/ColorSchemeToggle.jsx'
+import ColorSchemeToggle from '@components/ColorSchemeToggle/ColorSchemeToggle.jsx';
 import Header from '@components/Header/Header';
 
 export default function Home() {
@@ -10,11 +10,10 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
-
+      <Header />
 
       <main>
-        <ColorSchemeToggle/>
+        <ColorSchemeToggle />
         {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
