@@ -3,7 +3,7 @@ import { IconSun, IconMoon } from '@tabler/icons-react';
 import cx from 'clsx';
 import classes from './ColorScheme.module.css';
 
-export default function ColorSchemeToggle() {
+const ColorSchemeToggle = () => {
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
@@ -19,3 +19,5 @@ export default function ColorSchemeToggle() {
     </ActionIcon>
   );
 }
+
+export default ColorSchemeToggle
