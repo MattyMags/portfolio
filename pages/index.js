@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from '@styles/Home.module.css';
-import ColorSchemeToggle from '@components/ColorSchemeToggle/ColorSchemeToggle.jsx';
 import Header from '@components/Header/Header';
 import Tabs from '@components/Tabs/Tabs';
 export default function Home() {

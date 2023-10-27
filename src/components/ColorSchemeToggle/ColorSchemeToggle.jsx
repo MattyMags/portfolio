@@ -1,4 +1,4 @@
-import { ActionIcon, useMantineColorScheme, useComputedColorScheme, Text } from '@mantine/core';
+import { useMantineColorScheme, useComputedColorScheme, Text } from '@mantine/core';
 import { useState } from 'react';
 import clsx from 'clsx';
 
