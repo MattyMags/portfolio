@@ -1,15 +1,8 @@
 import { useState } from 'react';
-import NextApp, { AppProps, AppContext } from 'next/app';
+import NextApp from 'next/app';
 import { getCookie, setCookie } from 'cookies-next';
 import Head from 'next/head';
-import {
-  MantineProvider,
-  ColorScheme,
-  ColorSchemeProvider,
-  localStorageColorSchemeManager,
-  useMantineColorScheme
-} from '@mantine/core';
-import { Notifications } from '@mantine/notifications';
+import { MantineProvider, localStorageColorSchemeManager } from '@mantine/core';
 import '@mantine/core/styles.css';
 export default function App(props) {
   const { Component, pageProps } = props;
@@ -51,8 +44,7 @@ export default function App(props) {
           }
         }}
         withGlobalStyles
-        withNormalizeCSS
-      >
+        withNormalizeCSS>
         <Component {...pageProps} />
         {/* <Notifications /> */}
       </MantineProvider>
