@@ -2,7 +2,13 @@ import { useState } from 'react';
 import NextApp, { AppProps, AppContext } from 'next/app';
 import { getCookie, setCookie } from 'cookies-next';
 import Head from 'next/head';
-import { MantineProvider, ColorScheme, ColorSchemeProvider, localStorageColorSchemeManager, useMantineColorScheme} from '@mantine/core';
+import {
+  MantineProvider,
+  ColorScheme,
+  ColorSchemeProvider,
+  localStorageColorSchemeManager,
+  useMantineColorScheme
+} from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import '@mantine/core/styles.css';
 export default function App(props) {
@@ -17,7 +23,6 @@ export default function App(props) {
     setCookie('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 });
   };
 
-
   return (
     <>
       <Head>
@@ -27,30 +32,30 @@ export default function App(props) {
       </Head>
 
       {/* <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}> */}
-        <MantineProvider
+      <MantineProvider
         colorSchemeManager={colorSchemeManager}
         toggleColorScheme={toggleColorScheme}
-          theme={{
-            colorScheme,
-            headings: {
-              // properties for all headings
-              fontWeight: 400,
-              // fontFamily: 'Roboto',
+        theme={{
+          colorScheme,
+          headings: {
+            // properties for all headings
+            fontWeight: 400,
+            // fontFamily: 'Roboto',
 
-              // properties for individual headings, all of them are optional
-              sizes: {
-                h1: { fontWeight: 700, fontSize: '1.4rem', /* lineHeight: 1.4, */  },
-                h2: { fontSize: '1rem', lineHeight: 1.4 },
-                h6: { fontWeight: 900 },
-              },
-            },
-          }}
-          withGlobalStyles
-          withNormalizeCSS
-        >
-          <Component {...pageProps} />
-          {/* <Notifications /> */}
-        </MantineProvider>
+            // properties for individual headings, all of them are optional
+            sizes: {
+              h1: { fontWeight: 700, fontSize: '1.4rem' /* lineHeight: 1.4, */ },
+              h2: { fontSize: '1rem', lineHeight: 1.4 },
+              h6: { fontWeight: 900 }
+            }
+          }
+        }}
+        withGlobalStyles
+        withNormalizeCSS
+      >
+        <Component {...pageProps} />
+        {/* <Notifications /> */}
+      </MantineProvider>
       {/* </ColorSchemeProvider> */}
     </>
   );
@@ -60,6 +65,6 @@ App.getInitialProps = async (appContext) => {
   const appProps = await NextApp.getInitialProps(appContext);
   return {
     ...appProps,
-    colorScheme: getCookie('mantine-color-scheme', appContext.ctx) || 'dark',
+    colorScheme: getCookie('mantine-color-scheme', appContext.ctx) || 'dark'
   };
 };
