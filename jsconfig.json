@@ -2,7 +2,8 @@
     "compilerOptions": {
       "baseUrl": "./src", // Set this to your source directory.
       "paths": {
-        "@components/*": ["components/*"]
+        "@components/*": ["components/*"],
+        "@styles/*": ["styles/*"]
       }
     }
   }
