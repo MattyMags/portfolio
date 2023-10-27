@@ -6,7 +6,11 @@ import { Container } from '@mantine/core';
 import Logo from '@components/Logo/Logo';
 
 const Header = () => {
-  return <Container className={cx(classes.container)}><Logo/></Container>;
+  return (
+    <Container className={cx(classes.container)}>
+      <Logo />
+    </Container>
+  );
 };
 
 export default Header;
